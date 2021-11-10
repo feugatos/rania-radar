@@ -1,0 +1,145 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Rania Radar</title>
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="http://zalando.github.io/tech-radar/release/radar-0.5.js"></script>
+
+  <style>
+    body {
+      font-family: 'Source Sans Pro', arial, helvetica, sans-serif;
+      padding-bottom: 50px;
+    }
+
+    h3 {
+      margin-top: 50px;
+    }
+
+    li {
+      margin: 25px 50px 0 0;
+    }
+
+    table {
+      width: 1400px;
+      margin: 0 50px 0 50px;
+    }
+
+    td {
+      width: 50%;
+      vertical-align: top;
+      padding-right: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td>
+        <h2>Welcome to the Rania Radar</h2>
+      </td>
+    </tr>
+  </table>
+
+  <svg id="radar"></svg>
+
+  <script type="application/javascript">
+    radar_visualization({
+      svg_id: "radar",
+      width: 1450,
+      height: 1000,
+      colors: {
+        background: "#fff",
+        grid: "#bbb",
+        inactive: "#ddd"
+      },
+      title: "Rania Radar",
+      quadrants: [
+        { name: "Quadrant 1" },
+        { name: "Quadrant 2" },
+        { name: "Quadrant 3" },
+        { name: "Quadrant 4" },
+      ],
+      rings: [
+        { name: "Ring 1", color: "#93c47d" },
+        { name: "Ring 2", color: "#93d2c2" },
+        { name: "Ring 3", color: "#fbdb84" },
+        { name: "Ring 4", color: "#efafa9" }
+      ],
+      print_layout: true,
+      //zoomed_quadrant: 0,
+      //ENTRIES
+      entries: [
+        {
+          label: "EDB",
+          quadrant: 0,
+          ring: 0,
+          moved: -1
+        },
+        {
+          label: "ACIST",
+          quadrant: 3,
+          ring: 2,
+          moved: 1
+        },
+        {
+          label: "ACRIS",
+          quadrant: 2,
+          ring: 3,
+          moved: 0
+        },
+        {
+          label: "Orphan Works DB",
+          quadrant: 1,
+          ring: 2,
+          moved: -1
+        },
+        {
+          label: "Out of Commerce Works DB",
+          quadrant: 2,
+          ring: 0,
+          moved: 1
+        },
+        {
+          label: "TMView",
+          quadrant: 3,
+          ring: 1,
+          moved: -1
+        },
+        {
+          label: "DSView",
+          quadrant: 3,
+          ring: 2,
+          moved: -1
+        },
+        {
+          label: "OSA2",
+          quadrant: 0,
+          ring: 2,
+          moved: 0
+        },
+        {
+          label: "EuroClass",
+          quadrant: 1,
+          ring: 1,
+          moved: 1
+        }
+      ]
+      //ENTRIES
+    });
+  </script>
+
+  <table>
+    <tr>
+      <td>
+        <h3>What is the Rania Radar?</h3>
+        <p>No one knows...</p>
+      </td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
