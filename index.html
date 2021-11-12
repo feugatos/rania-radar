@@ -2,8 +2,7 @@
 
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-  <title>Rania Radar</title>
-  <link rel="shortcut icon" href="favicon.ico">
+  <title>STSC Radar</title>
 
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="https://zalando.github.io/tech-radar/release/radar-0.5.js"></script>
@@ -36,13 +35,6 @@
 </head>
 
 <body>
-  <table>
-    <tr>
-      <td>
-        <h2>Welcome to the Rania Radar</h2>
-      </td>
-    </tr>
-  </table>
 
   <svg id="radar"></svg>
 
@@ -56,90 +48,131 @@
         grid: "#bbb",
         inactive: "#ddd"
       },
-      title: "Rania Radar",
+      title: "STSC Radar",
       quadrants: [
-        { name: "Quadrant 1" },
-        { name: "Quadrant 2" },
-        { name: "Quadrant 3" },
-        { name: "Quadrant 4" },
+        { name: "Risk Mangement" },       //index=0, katw deksia
+        { name: "Delivery & Operation" }, //index=1, katw aristera
+        { name: "Engagement" },           //index=2, parnw aristera
+        { name: "Maturity" }              //index=3, panw deksia
+
       ],
       rings: [
-        { name: "Ring 1", color: "#93c47d" },
-        { name: "Ring 2", color: "#93d2c2" },
-        { name: "Ring 3", color: "#fbdb84" },
-        { name: "Ring 4", color: "#efafa9" }
+        { name: "Crawl", color: "#93c47d" }, //index=0
+        { name: "Walk", color: "#93d2c2" },  //index=1
+        { name: "Run", color: "#fbdb84" },   //index=2
+        { name: "Fly", color: "#efafa9" }    //index=3
       ],
       print_layout: true,
       //zoomed_quadrant: 0,
       //ENTRIES
       entries: [
         {
-          label: "EDB",
-          quadrant: 0,
-          ring: 0,
-          moved: -1
-        },
-        {
-          label: "ACIST",
-          quadrant: 3,
-          ring: 2,
-          moved: 1
-        },
-        {
-          label: "ACRIS",
+          label: "Transparency",
           quadrant: 2,
           ring: 3,
-          moved: 0
+          moved: 0 //0=stathero, 1=anevike, -1=epese
         },
         {
-          label: "Orphan Works DB",
-          quadrant: 1,
-          ring: 2,
-          moved: -1
-        },
-        {
-          label: "Out of Commerce Works DB",
+          label: "Ownership/Accountability",
           quadrant: 2,
-          ring: 0,
-          moved: 1
+          ring: 2,
+          moved: 0 //0=stathero, 1=anevike, -1=epese
         },
         {
-          label: "TMView",
+          label: "Continuous Learning",
+          quadrant: 2,
+          ring: 3,
+          moved: 0 //0=stathero, 1=anevike, -1=epese
+        },
+        {
+          label: "Backlog Management",
           quadrant: 3,
           ring: 1,
-          moved: -1
+          moved: 0 //0=stathero, 1=anevike, -1=epese
         },
         {
-          label: "DSView",
+          label: "Agile & Alignment Events",
           quadrant: 3,
           ring: 2,
-          moved: -1
+          moved: 0 //0=stathero, 1=anevike, -1=epese
         },
         {
-          label: "OSA2",
+          label: "Resource Management & Capacity Planning",
+          quadrant: 3,
+          ring: 2,
+          moved: -1 //0=stathero, 1=anevike, -1=epese
+        },
+        {
+          label: "Tools & Boards",
+          quadrant: 3,
+          ring: 2,
+          moved: 0 //0=stathero, 1=anevike, -1=epese
+        },
+        {
+          label: "Adaptability",
+          quadrant: 3,
+          ring: 3,
+          moved: 0 //0=stathero, 1=anevike, -1=epese
+        },
+        {
+          label: "Metrics/KPIs",
+          quadrant: 3,
+          ring: 2,
+          moved: 0 //0=stathero, 1=anevike, -1=epese
+        },
+        {
+          label: "Usages of Agile Technical Practices",
+          quadrant: 1,
+          ring: 1,
+          moved: 0 //0=stathero, 1=anevike, -1=epese
+        },
+        {
+          label: "Testing Strategy",
+          quadrant: 1,
+          ring: 2,
+          moved: 0 //0=stathero, 1=anevike, -1=epese
+        },
+        {
+          label: "Automation Code Reviews",
+          quadrant: 1,
+          ring: 2,
+          moved: 0 //0=stathero, 1=anevike, -1=epese
+        },
+        {
+          label: "Testing Effort estimated",
+          quadrant: 1,
+          ring: 1,
+          moved: 0 //0=stathero, 1=anevike, -1=epese
+        },
+        {
+          label: "No Missing Testing Skill",
+          quadrant: 1,
+          ring: 2,
+          moved: 0 //0=stathero, 1=anevike, -1=epese
+        },
+        {
+          label: "Reporting",
+          quadrant: 1,
+          ring: 3,
+          moved: 0 //0=stathero, 1=anevike, -1=epese
+        },
+        {
+          label: "Coaching of Testing Frameworks",
+          quadrant: 1,
+          ring: 3,
+          moved: 0 //0=stathero, 1=anevike, -1=epese
+        },
+        {
+          label: "Identification, Mitigation",
           quadrant: 0,
           ring: 2,
-          moved: 0
+          moved: 0 //0=stathero, 1=anevike, -1=epese
         },
-        {
-          label: "EuroClass",
-          quadrant: 1,
-          ring: 1,
-          moved: 1
-        }
       ]
       //ENTRIES
     });
   </script>
 
-  <table>
-    <tr>
-      <td>
-        <h3>What is the Rania Radar?</h3>
-        <p>No one knows...</p>
-      </td>
-    </tr>
-  </table>
 
 </body>
 
